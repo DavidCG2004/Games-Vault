@@ -51,11 +51,10 @@ Aplicación Flutter para gestionar una colección personal de videojuegos, con e
 
 ## Capturas
 
-> Agrega aquí capturas de Home, Colección, Explorador y Detalle una vez generadas desde el dispositivo o emulador.
-
-| Home | Colección | Explorador | Detalle |
-|------|-----------|------------|---------|
-| _pendiente_ | _pendiente_ | _pendiente_ | _pendiente_ |
+| Home | Colección | Explorador | Detalle | Form | Acerca |
+|------|-----------|------------|---------|------|--------|
+|<img width="1080" height="2340" alt="WhatsApp Image 2026-06-17 at 11 24 30 PM" src="https://github.com/user-attachments/assets/436fff00-e84d-4685-8d33-114978bcc357" />
+| _pendiente_ | _pendiente_ | _pendiente_ |
 
 ---
 
