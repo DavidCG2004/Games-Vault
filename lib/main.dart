@@ -27,7 +27,8 @@ Future<void> main() async {
     log('[App] MongoDB conectado exitosamente.');
   } catch (e) {
     log('[App] No se pudo conectar a MongoDB: $e');
-    // La app seguirá funcionando pero las operaciones CRUD fallarán.
+    // La app seguirá funcionando pero las operaciones CRUD fallarán
+    // hasta que se recupere la conexión (ver _ensureConnected).
   }
 
   // 3. Retirar el splash — Flutter toma el control de la pantalla.
@@ -38,8 +39,53 @@ Future<void> main() async {
 }
 
 /// Aplicación principal con inyección de Providers y rutas.
-class GamesApp extends StatelessWidget {
+///
+/// Observa el ciclo de vida de la app para reconectar a MongoDB y
+/// recargar la colección cuando vuelve de background (pantalla apagada,
+/// minimizada, o suspendida por el sistema operativo).
+class GamesApp extends StatefulWidget {
   const GamesApp({super.key});
+
+  @override
+  State<GamesApp> createState() => _GamesAppState();
+}
+
+class _GamesAppState extends State<GamesApp> with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    super.didChangeAppLifecycleState(state);
+
+    // La app volvió a primer plano: el socket de MongoDB puede haberse
+    // cerrado mientras estaba en background, así que reconectamos y
+    // recargamos la colección local antes de que el usuario note nada.
+    if (state == AppLifecycleState.resumed) {
+      _onAppResumed();
+    }
+  }
+
+  Future<void> _onAppResumed() async {
+    try {
+      await MongoDatabase().connect();
+    } catch (e) {
+      log('[App] Error al reconectar tras resume: $e');
+    }
+
+    if (!mounted) return;
+    // ignore: use_build_context_synchronously
+    context.read<CollectionProvider>().fetchLocalGames();
+  }
 
   @override
   Widget build(BuildContext context) {
