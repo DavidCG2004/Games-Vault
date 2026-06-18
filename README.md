@@ -53,7 +53,7 @@ Aplicación Flutter para gestionar una colección personal de videojuegos, con e
 
 | Home | Colección | Explorador | Detalle | Form | Acerca |
 |------|-----------|------------|---------|------|--------|
-|<img height="2340" alt="WhatsApp Image 2026-06-17 at 11 24 30 PM" src="https://github.com/user-attachments/assets/436fff00-e84d-4685-8d33-114978bcc357" />
+|<img alt="WhatsApp Image 2026-06-17 at 11 24 30 PM" src="https://github.com/user-attachments/assets/436fff00-e84d-4685-8d33-114978bcc357" />
 | _pendiente_ | _pendiente_ | _pendiente_ |
 
 ---
