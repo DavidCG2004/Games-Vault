@@ -53,8 +53,8 @@ Aplicación Flutter para gestionar una colección personal de videojuegos, con e
 
 | Home | Colección | Explorador | Detalle | Form | Acerca |
 |------|-----------|------------|---------|------|--------|
-|<img width="251" height="522" alt="WhatsApp Image 2026-06-17 at 11 24 30 PM" src="https://github.com/user-attachments/assets/436fff00-e84d-4685-8d33-114978bcc357" />
-| _pendiente_ | _pendiente_ | _pendiente_ |
+|<img width="251" height="522" alt="WhatsApp Image 2026-06-17 at 11 24 30 PM" src="https://github.com/user-attachments/assets/436fff00-e84d-4685-8d33-114978bcc357" />|<img width="251" height="522" alt="WhatsApp Image 2026-06-17 at 11 24 30 PM (1)" src="https://github.com/user-attachments/assets/e643be53-b9ef-4ad0-897d-b92b0bf9ace6" />|<img width="251" height="522" alt="WhatsApp Image 2026-06-17 at 11 24 31 PM" src="https://github.com/user-attachments/assets/f41201e2-0b0a-4531-bc35-3aafef8da4b1" />|<img width="251" height="522" alt="WhatsApp Image 2026-06-17 at 11 24 31 PM (1)" src="https://github.com/user-attachments/assets/4a8df050-a5fe-41a9-9542-30db0f086eaa" />|<img width="251" height="522" alt="WhatsApp Image 2026-06-17 at 11 24 31 PM (2)" src="https://github.com/user-attachments/assets/402faf07-0b72-47ac-904d-65a1070eab45" />|<img width="251" height="522" alt="WhatsApp Image 2026-06-17 at 11 24 31 PM (3)" src="https://github.com/user-attachments/assets/c766ecad-1cf0-48e2-a708-fcd480057966" />
+|
 
 ---
 
