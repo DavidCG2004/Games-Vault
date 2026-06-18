@@ -1,0 +1,82 @@
+name: games_vault
+description: "Gestión de colección de videojuegos."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI
+  cupertino_icons: ^1.0.8
+  cached_network_image: ^3.3.1
+
+  # Red
+  http: ^1.2.0
+
+  # Base de datos
+  mongo_dart: ^0.10.0
+
+  # State management
+  provider: ^6.1.1
+
+  # Utilidades
+  uuid: ^4.3.3
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+  # Imagen
+  image_picker: ^1.1.2
+
+  # Splash (runtime — necesario para preserve/remove)
+  flutter_native_splash: ^2.4.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+  # Generación de íconos (solo en desarrollo)
+  flutter_launcher_icons: ^0.14.3
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+# ── Configuración inline del splash ──────────────────────────────────────────
+# Alternativa al archivo flutter_native_splash.yaml separado.
+# Si prefieres el archivo .yaml externo, elimina esta sección.
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: assets/images/splash_image.png
+  color_dark: "#0A0A0A"
+  image_dark: assets/images/splash_image_dark.png
+  android: true
+  android_gravity: center
+  ios: true
+  web: false
+  android_12:
+    color: "#FFFFFF"
+    image: assets/images/splash_image.png
+    color_dark: "#0A0A0A"
+    image_dark: assets/images/splash_image_dark.png
+    icon_background_color: "#FFFFFF"
+    icon_background_color_dark: "#0A0A0A"
+
+# ── Configuración inline de íconos ───────────────────────────────────────────
+flutter_launcher_icons:
+  image_path: "assets/images/app_icon.png"
+  android: true
+  adaptive_icon_foreground: "assets/images/app_icon.png"
+  adaptive_icon_background: "#FFFFFF"
+  ios: true
+  remove_alpha_ios: true
+  windows:
+    generate: true
+    image_path: "assets/images/app_icon.png"
+    icon_size: 48
